@@ -60,6 +60,10 @@ class Settings:
         self.email = os.environ["UDEMY_EMAIL"]
         self.password = os.environ["UDEMY_PASSWORD"]
 
+        self.is_ci_build = False
+        self.categories = ["Development", "Design"]
+        self.languages = ["English"]
+
     def _load_user_settings(self) -> Dict:
         """
         Loads the settings from the yaml file if it exists
